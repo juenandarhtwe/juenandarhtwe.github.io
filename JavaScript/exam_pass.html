@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exam Result</title>
+</head>
+<body>
+
+    <h1><b>Exam Result</b></h1>
+    <form name="myForm">
+     <label for="turbo">Turbo C</label>
+     <input type="number" name="turbo" id="turbo" placeholder="Enter Turbo C Mark">
+     <br><br>
+     <label for="java">Java</label>
+     <input type="number" name="j" id="java" placeholder="Enter Java Mark">
+     <br><br>
+     <label for="javascript">JavaScript</label>
+     <input type="number" name="js" id="javascript" placeholder="Enter JavaScript mark">
+     <br><br>
+     <button type="button" onclick="result()">Result</button>
+    </form>
+
+     <script>
+        function result(){
+            // alert("hello")
+            let turbo = document.myForm.turbo.value;
+            console.log(turbo);
+            let j = document.myForm.j.value;
+            console.log(j);
+            let js = document.myForm.js.value;
+            console.log(js);
+
+            // if (turbo >= 50 && j >= 50 && js >= 50) {
+            //     document.write('<h1>This student is pass!</h1>');
+            // } else {
+            //     document.write('<h1>This student is fail!</h1>');
+            // }
+
+            if (turbo >= 81 || j >= 81 || js >= 81) {
+                document.write('<h1>This student is disctinction!</h1>');
+            } else if (turbo >= 50 && j >= 50 && js >= 50) {
+                document.write('<h1>This student is pass!</h1>');
+            } else {
+                document.write('<h1>This student is fail!</h1>');
+            }
+        }
+     </script>
+</body>
+</html>
+
