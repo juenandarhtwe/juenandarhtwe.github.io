@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Exam Result</title>
+    <title>Document</title>
 </head>
 <body>
 
@@ -22,9 +22,8 @@
      <button type="button" onclick="result()">Result</button>
     </form>
 
-     <script>
-        function result(){
-            // alert("hello")
+    <script>
+       function result(){
             let turbo = document.myForm.turbo.value;
             console.log(turbo);
             let j = document.myForm.j.value;
@@ -32,21 +31,16 @@
             let js = document.myForm.js.value;
             console.log(js);
 
-            if (turbo >= 50 && j >= 50 && js >= 50) {
-                document.write('<h1>This student is pass!</h1>');
+            if (turbo <= 50 || j <= 50 || js <= 50){
+                document.write('<h1>This student is Fail</h1>');
+            } else if (turbo >= 81 || j >= 81 || js >= 81){
+                document.write('<h1>This student is Disctinction</h1>')
             } else {
-                document.write('<h1>This student is fail!</h1>');
-            }
-
-            if (turbo >= 81 && j >= 81 && js >= 81) {
-                document.write('<h1>This student is disctinction!</h1>');
-            } else if (turbo >= 50 && j >= 50 && js >= 50) {
-                document.write('<h1>This student is pass!</h1>');
-            } else {
-                document.write('<h1>This student is fail!</h1>');
+                document.write('<h1>This student is Pass</h1>')
             }
         }
-     </script>
+
+    </script>
 </body>
 </html>
 
